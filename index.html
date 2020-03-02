@@ -3,6 +3,51 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Layout posición absoluta</title>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+	<style>
+		*{
+          box-sizing: border-box;
+		}
+		body{
+			background:gray;
+			margin: 0 0 100px;
+			padding: 0;
+			font-family: 'Montserrat';
+		}
+		header, section, nav, article, footer{
+			padding: 15px;
+			margin: 15px;
+		}
+		header{
+			background:red;
+			text-align: center;
+			color: white;
+		}
+		section{
+			background:darkred;
+			position: relative;
+		}
+		nav{
+			background:peru;
+			position: absolute;
+  			left: 0px;
+  			width: 200px;
+		}
+		article{
+			background:yellow;
+			margin-left: 220px;
+		}
+		footer{
+			background: orange;
+			text-align: center;
+			position: fixed;
+		  	bottom: 0;
+		  	left: 0;
+		  	height: 70px;
+		  	width: 100%;
+			margin: 0;
+		}
+	</style>
 </head>
 <body>
 	<header>
