@@ -1,59 +1,81 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Layout con float</title>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 	<style>
-		*{
-          box-sizing: border-box;
+		* {
+			box-sizing: border-box;
 		}
-		body{
-			background:gray;
+
+		body {
+			background: gray;
 			margin: 0 0 100px;
 			padding: 0;
 			font-family: 'Montserrat';
 		}
-		header, section, nav, article, footer{
+
+		header,
+		section,
+		nav,
+		article,
+		footer {
 			padding: 15px;
 			margin: 15px;
+			display: block;
 		}
-		header{
-			background:red;
+
+		header {
+			background: red;
 			text-align: center;
 			color: white;
 		}
-		section{
-			background:darkred;
-			position: relative;
+
+		section {
+			background: darkred;
 		}
-		nav{
-			background:peru;
-			position: absolute;
-  			left: 0px;
-  			width: 200px;
+
+		nav {
+			background: peru;
+			float: left;
+			width: 30%;
 		}
-		article{
-			background:yellow;
-			margin-left: 220px;
+
+		.contenedor {
+			float: left;
+			width: 60%;
 		}
-		footer{
+
+		article {
+			background: yellow;
+		}
+
+		footer {
 			background: orange;
 			text-align: center;
-			position: fixed;
-		  	bottom: 0;
-		  	left: 0;
-		  	height: 70px;
-		  	width: 100%;
+			height: 70px;
+			width: 100%;
 			margin: 0;
 		}
+
+		.clearfix {
+			overflow: auto;
+		}
+
+		.after-box {
+			clear: both;
+		}
+
 	</style>
 </head>
+
 <body>
 	<header>
-		<h1>Layout con posición absoluta</h1>
+		<h1>Layout con float</h1>
 	</header>
-	<section>
+	<section class="clearfix">
 		<nav>
 			<ul>
 				<li>Inicio</li>
@@ -62,21 +84,24 @@
 				<li>Contacto</li>
 			</ul>
 		</nav>
-		<article>
-			<h2>Articulo 1</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit nihil, sit optio. Qui odit natus doloribus possimus et consectetur culpa, maxime vero minima voluptatem dicta molestiae sit non quam hic.</p>
-		</article>
-		<article>
-			<h2>Articulo 2</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit nihil, sit optio. Qui odit natus doloribus possimus et consectetur culpa, maxime vero minima voluptatem dicta molestiae sit non quam hic.</p>
-		</article>
-		<article>
-			<h2>Articulo 3</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit nihil, sit optio. Qui odit natus doloribus possimus et consectetur culpa, maxime vero minima voluptatem dicta molestiae sit non quam hic.</p>
-		</article>
-		<footer>
-			© 2020 Todos los derechos reservados
-		</footer>
+		<div class="contenedor">
+			<article>
+				<h2>Articulo 1</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit nihil, sit optio. Qui odit natus doloribus possimus et consectetur culpa, maxime vero minima voluptatem dicta molestiae sit non quam hic.</p>
+			</article>
+			<article>
+				<h2>Articulo 2</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit nihil, sit optio. Qui odit natus doloribus possimus et consectetur culpa, maxime vero minima voluptatem dicta molestiae sit non quam hic.</p>
+			</article>
+			<article>
+				<h2>Articulo 3</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit nihil, sit optio. Qui odit natus doloribus possimus et consectetur culpa, maxime vero minima voluptatem dicta molestiae sit non quam hic.</p>
+			</article>
+		</div>
 	</section>
+	<footer class="after-box">
+		© 2020 Todos los derechos reservados
+	</footer>
 </body>
+
 </html>
