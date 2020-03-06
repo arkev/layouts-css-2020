@@ -5,6 +5,7 @@
 	<meta charset="UTF-8">
 	<title>Layout con Float</title>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width">
 	<style>
 		* {
 			box-sizing: border-box;
@@ -39,13 +40,10 @@
 
 		nav {
 			background: peru;
-			float: left;
-			width: 30%;
 		}
 
 		.contenedor {
-			float: left;
-			width: 60%;
+			display: block;
 		}
 
 		article {
@@ -66,6 +64,30 @@
 
 		.after-box {
 			clear: both;
+		}
+		
+		@media screen and (min-width:768px) {
+			/* aquí inician los estilos de tablet*/
+			nav {
+				float: left;
+				width: 30%;
+			}
+			.contenedor {
+				float: left;
+				width: 65%;
+			}
+			/* aquí terminan los estilos de tablet*/
+		}
+		
+		@media screen and (min-width:1024px) {
+			/* aquí inician los estilos de laptop*/
+			.contenedor {
+				width: 66%;
+			}
+			h1 {
+    			font-size: 48px;
+			}
+			/* aquí terminan los estilos de laptop*/
 		}
 
 	</style>
