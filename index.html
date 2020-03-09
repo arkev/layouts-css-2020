@@ -60,22 +60,17 @@
 			margin: 0;
 		}
 
-		.clearfix {
-			overflow: auto;
-		}
-
-		.after-box {
-			clear: both;
-		}
 		
 		@media screen and (min-width:768px) {
 			/* aquí inician los estilos de tablet*/
 			nav {
-				float: left;
+				display: inline-block;
+				vertical-align: top;
 				width: 30%;
 			}
 			.contenedor {
-				float: left;
+				display: inline-block;
+				vertical-align: top;
 				width: 65%;
 			}
 			/* aquí terminan los estilos de tablet*/
@@ -99,7 +94,7 @@
 	<header>
 		<h1>Layout con Inline-block</h1>
 	</header>
-	<section class="clearfix">
+	<section>
 		<nav>
 			<ul>
 				<li>Inicio</li>
@@ -123,7 +118,7 @@
 			</article>
 		</div>
 	</section>
-	<footer class="after-box">
+	<footer>
 		© 2020 Todos los derechos reservados
 	</footer>
 </body>
