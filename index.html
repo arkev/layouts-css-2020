@@ -3,9 +3,10 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Layout con Flexbox</title>
+	<title>Layout con Flexbox Grid</title>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="flexboxgrid.css">
 	<style>
 		* {
 			box-sizing: border-box;
@@ -18,24 +19,17 @@
 			font-family: 'Montserrat';
 		}
 
-		header,
-		section,
-		nav,
-		article,
-		footer {
-			padding: 15px;
-			margin: 15px;
-			display: block;
-		}
-
 		header {
 			background: red;
 			text-align: center;
 			color: white;
+			padding: 2em 0;
 		}
-		h1{
+
+		h1 {
 			transition: all 1s ease-in-out;
 		}
+
 		section {
 			background: darkred;
 		}
@@ -44,75 +38,59 @@
 			background: peru;
 		}
 
-		.contenedor {
-			display: block;
-		}
-
 		article {
 			background: yellow;
+			padding: 1em;
+			margin: 1em;
 		}
 
 		footer {
 			background: orange;
 			text-align: center;
 			height: 70px;
-			width: 100%;
-			margin: 0;
+			padding: 1.5em 0;
 		}
 
-		
-		@media screen and (min-width:768px) {
-			/* aquí inician los estilos de tablet*/
-			section {
-				display: flex;
-			}
-			nav {
-				width: 200px;
-  				min-width: 100px;
-			}
-			.contenedor {
-				flex: 1;
-			}
-			/* aquí terminan los estilos de tablet*/
+		.row {
+			margin-right: 0;
+			margin-left: 0;
 		}
-		
+
 		@media screen and (min-width:1024px) {
+
 			/* aquí inician los estilos de laptop*/
-			nav {
-				width: 300px;
-			}
 			h1 {
-    			font-size: 48px;
+				font-size: 48px;
 			}
+
 			/* aquí terminan los estilos de laptop*/
 		}
-
 	</style>
 </head>
 
 <body>
 	<header>
-		<h1>Layout con Flexbox</h1>
+		<h1>Layout con Flexbox Grid</h1>
 	</header>
-	<section>
-		<nav>
-			<ul>
+	<section class="row">
+		<nav class="col-xs-12 col-sm-4 col-md-3">
+			<ul class="box">
 				<li>Inicio</li>
 				<li>Nosotros</li>
 				<li>Servicios</li>
 				<li>Contacto</li>
 			</ul>
 		</nav>
-		<div class="contenedor">
-			<article>
+		<div class="col-xs-12 col-sm-8 col-md-9">
+			<article class="box">
 				<h2>Articulo 1</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit nihil, sit optio. Qui odit natus doloribus possimus et consectetur culpa, maxime vero minima voluptatem dicta molestiae sit non quam hic.</p>
 			</article>
-			<article>
+			<article class="box">
 				<h2>Articulo 2</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit nihil, sit optio. Qui odit natus doloribus possimus et consectetur culpa, maxime vero minima voluptatem dicta molestiae sit non quam hic.</p>
 			</article>
-			<article>
+			<article class="box">
 				<h2>Articulo 3</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit nihil, sit optio. Qui odit natus doloribus possimus et consectetur culpa, maxime vero minima voluptatem dicta molestiae sit non quam hic.</p>
 			</article>
